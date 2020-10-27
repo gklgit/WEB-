@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>切换图片</title>
+		<style type="text/css">
+			div{
+				border: 1px solid red;
+				width: 1240px;
+				height: 500px;
+				margin: auto;
+				text-align: center;
+			}
+		</style>
+		<script>
+			function init(){
+				setInterval("changImg()",3000);
+				time = setInterval("show()",3000);
+			}
+			var i=1;
+			function changImg(){
+				i++;
+				document.getElementById("img1").src="../img/"+i+".jpg";
+				if(i==3){
+					i=0;
+				}
+			}
+			function show(){
+				var uad = document.getElementById("ad1");
+				uad.style.display = "block";
+				clearInterval(time);
+				time = setInterval("hiddenadd()",3000);
+				
+			}
+			function hiddenadd(){
+				document.getElementById("ad1").style.display = "none";
+				clearInterval(time);
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<div >
+			<img src="../img/f001a62f-a49d-4a4d-b56f-2b6908a0002c_g.jpg" style="display: none;" id="ad1">
+			<input type="button" value="下一张" onclick="changImg()";"/>
+			<img src="../img/1.jpg" id="img1" width="100%"/>
+		</div>
+	</body>
+</html>

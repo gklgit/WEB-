@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<script>
+			function checkForm(){
+				// alert("aaaa");
+				var uValue = document.getElementById("username").value;
+				// alert(uValue);
+				if(uValue == ""){
+					alert("用户名不能为空")
+					return false;
+				}
+				
+				var eValue = document.getElementById("email").value;
+				if(!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(eValue)){
+					alert("邮箱格式不正确");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1" width="100%" cellspacing="0px" cellpadding="0px">
+			<!-- 1.logo -->
+			<tr>
+				<td>
+					<!-- 1.嵌套一个1行三列的表格 -->
+					<table border="1px" width="100%">
+						<tr height="50px">
+							<td width="33.3%">
+								<img src="img/logo2.png" />
+							</td>
+							<td width="33.3%">
+								<img src="img/header.jpg" />
+							</td>
+							<td width="33.3%">
+								<table>
+								<td width="33.3%"><a href="#">登陆</a></td>
+								<td width="33.3%"><a href="#">注册</a></td>
+								<td width="33.3%"><a href="#">购物车</a></td>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- 2导航栏部分 -->
+			<tr height="50px">
+				<td bgcolor="black">
+					&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white" size="5">首页</font>
+					</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">手机数码</font>
+					</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">电脑办公</font>
+					</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">鞋靴箱包</font>
+					</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">家用电器</font>
+					</a>
+				</td>
+			</tr>
+			<!-- 3.注册表单 -->
+			<tr>
+				<td height="500px" background="img/regist_bg.jpg">
+					<form action="#" method="get" name="regForm" onsubmit="return checkForm()">
+						<table bgcolor="white" align="center" border="1px" cellpadding="0px" cellspacing="0px" width="600px" height="400px">
+							<tr height="50px">
+								<td colspan="2">
+									&nbsp;<font size="4">会员注册</font>&nbsp;&nbsp;&nbsp; USER REGISTER
+								</td>
+								
+							</tr>
+							<tr height="50px">
+								<td width="40%" align="right">用户名&nbsp;</td>
+								<td>
+									<input type="text" name="username" id="username"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">密码&nbsp;</td>
+								<td>
+									<input type="password" name="password"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">确认密码&nbsp;</td>
+								<td>
+									<input type="password" name="repassword" />
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">Email&nbsp;</td>
+								<td>
+									<input type="text" name="Email" id="email"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">姓名&nbsp;</td>
+								<td>
+									<input type="text" name="name"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">性别&nbsp;</td>
+								<td>
+									<input type="radio" name="sex" />男
+									<input type="radio" name="sex" />女
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">出生日期&nbsp;</td>
+								<td>
+									<input type="text" name="brithday"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="40%" align="right">验证码&nbsp;</td>
+								<td>
+									<input type="text" name="yanzhengma" />
+									<img src="img/yanzhengma.png" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center">
+									<input type="submit" name="zhuce" value="注册" />
+								</td>
+							</tr>
+						</table>
+					</form>
+				</td>
+			</tr>
+			<!-- 4.广告图片 -->
+			<tr>
+				<td>
+					<img src="img/footer.jpg" />
+				</td>
+			</tr>
+			<!-- 5.友情链接、版权信息 -->
+			<tr>
+				<td align="center">
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">招贤纳士</a>
+					<a href="#">法律声明</a>
+					<a href="#">友情链接</a>
+					<a href="#">支付方式</a>
+					<a href="#">配送方式</a>
+					<a href="#">服务声明</a>
+					<a href="#">广告声明</a>
+					<p>
+						Copyright c 2005-2016 传智博客 版权所有
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
