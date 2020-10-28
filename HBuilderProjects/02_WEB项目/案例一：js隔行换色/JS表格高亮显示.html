@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS隔行换色</title>
+		<script>
+			function ChangColor(id,flag){
+				if(flag=="over"){
+					document.getElementById(id).style.backgroundColor = "yellow"
+				}else if(flag=="out"){
+					document.getElementById(id).style.backgroundColor = "white"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1px" width="300px" height="200px" align="center">
+			<thead>
+				<tr >
+					<td>编号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr onmousemove="ChangColor('tr1','over')" onmouseout="ChangColor('tr1','out')" id="tr1">
+					<td>1</td>
+					<td>张三</td>
+					<td>11</td>
+				</tr>
+				<tr onmousemove="ChangColor('tr2','over')" onmouseout="ChangColor('tr2','out')" id="tr2">
+					<td>2</td>
+					<td>李四</td>
+					<td>22</td>
+				</tr>
+				<tr onmousemove="ChangColor('tr3','over')" onmouseout="ChangColor('tr3','out')" id="tr3">
+					<td>3</td>
+					<td>小明</td>
+					<td>33</td>
+				</tr>
+				<tr onmousemove="ChangColor('tr4','over')" onmouseout="ChangColor('tr4','out')" id="tr4">
+					<td>4</td>
+					<td>赵四</td>
+					<td>44</td>
+				</tr>
+				<tr onmousemove="ChangColor('tr5','over')" onmouseout="ChangColor('tr5','out')" id="tr5">
+					<td>5</td>
+					<td>刘能</td>
+					<td>55</td>
+				</tr>
+				<tr onmousemove="ChangColor('tr6','over')" onmouseout="ChangColor('tr6','out')" id="tr6">
+					<td>6</td>
+					<td>大脚</td>
+					<td>66</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
